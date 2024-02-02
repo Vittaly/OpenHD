@@ -145,10 +145,10 @@ std::vector<Camera> DCameras::detect_raspberrypi_broadcom_csi(std::shared_ptr<sp
 
 std::vector<Camera> DCameras::detect_allwinner_csi(std::shared_ptr<spdlog::logger>& m_console) {
   m_console->debug("detect_allwinner_csi(");
-  if(OHDFilesystemUtil::exists("/dev/video0")){
-    m_console->debug("Camera set as Allwinner_CSI_0");
+  if(OHDFilesystemUtil::exists("/dev/video1")){
+    m_console->debug("Camera set as Allwinner_CSI_1");
     Camera camera;
-    camera.name = "Allwinner_CSI_0";
+    camera.name = "Allwinner_CSI_1";
     camera.vendor = "Allwinner";
     camera.type = CameraType::ALLWINNER_CSI;
     camera.bus = "0";
