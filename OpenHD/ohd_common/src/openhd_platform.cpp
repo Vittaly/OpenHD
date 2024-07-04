@@ -165,7 +165,7 @@ static std::optional<std::pair<PlatformType,BoardType>> detect_allwinner(){
   if (OHDFilesystemUtil::exists(ALLWINNER_BOARDID_PATH)) {
     return std::make_pair(PlatformType::Allwinner,BoardType::Allwinner);
   }
-  
+
     if (OHDFilesystemUtil::exists(DEVICE_TREE_COMPATIBLE_PATH)) {
     std::string compatible_content = OHDFilesystemUtil::read_file(DEVICE_TREE_COMPATIBLE_PATH);
 
